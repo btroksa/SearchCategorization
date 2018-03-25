@@ -11,19 +11,16 @@ public class articleUnigram implements WritableComparable {
     private int documentID;
     private String articleTitle;
     private String unigram;
-    private int sentenceNum;
 
     public articleUnigram(){
         documentID = 0;
         unigram = "";
-        sentenceNum = 0;
     }
 
-    public articleUnigram(int id, String title, String gram, int sentenceNum) {
+    public articleUnigram(int id, String title, String gram) {
         documentID = id;
         articleTitle = title;
         unigram = gram;
-        this.sentenceNum = sentenceNum;
     }
 
     public int getDocumentID() {
@@ -66,11 +63,14 @@ public class articleUnigram implements WritableComparable {
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
+        //read document id
         documentID = dataInput.readInt();
+        //read in article title
         int length = dataInput.readInt();
         byte [] buffer = new byte[length];
         dataInput.readFully(buffer,0,length);
         articleTitle = new String(buffer);
+        //read in unigram
         length = dataInput.readInt();
         buffer = new byte[length];
         dataInput.readFully(buffer,0,length);

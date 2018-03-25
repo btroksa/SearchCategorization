@@ -36,12 +36,11 @@ public class sentenceComparator implements WritableComparable {
     public int compareTo(Object o) {
         if(o instanceof sentenceComparator) {
             sentenceComparator compare = (sentenceComparator) o;
-            if(this.articleTitle.equals(compare.articleTitle) && this.documentID == compare.documentID
-                    && this.unigram.equals(compare.unigram)){
+            if(this.articleTitle.equals(compare.articleTitle) && this.documentID == compare.documentID){
                 return 0;
             }
             else {
-                return this.unigram.compareTo(compare.unigram) + this.documentID - compare.documentID;
+                return this.documentID - compare.documentID;
             }
         }
         else{
@@ -71,7 +70,7 @@ public class sentenceComparator implements WritableComparable {
 
     @Override
     public String toString(){
-        return documentID + "\t" + unigram;
+        return documentID + "\t";
     }
 
 }
