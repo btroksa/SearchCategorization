@@ -4,30 +4,31 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 import cs435.UpdateCount;
-import cs435.customObjects.TFValues;
-import org.apache.hadoop.io.IntWritable;
+import cs435.customObjects.IDFValues;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class idfReducer extends Reducer<Text, TFValues, Text, TFValues>{
-    public void reduce(Text key, Iterable<TFValues> values, Context context) throws IOException, InterruptedException {
-        int count = 0;
-        long N = context.getCounter(UpdateCount.CNT).getValue();
-        LinkedList<TFValues> valuesCopy = new LinkedList<>();
+public class idfReducer extends Reducer<Text, IDFValues, Text, IDFValues>{
+    public void reduce(Text key, Iterable<IDFValues> values, Context context) throws IOException, InterruptedException {
 
-        int maxFrequency = Integer.MIN_VALUE;
-        for(TFValues val : values) {
-            valuesCopy.offer(val);
-            maxFrequency = Math.max(maxFrequency, val.getFrequency());
+        double ni = 0;
+        long N = context.getConfiguration().getLong(UpdateCount.CNT.name(), 0);
+        LinkedList<IDFValues> valuesCopy = new LinkedList<>();
+
+        for(IDFValues val : values) {
+            valuesCopy.offer(new IDFValues(val.getDocumentID(), val.getIDFValue()));
+            ni++;
         }
-
-        for(TFValues val : valuesCopy) {
-            context.write(key, new TFValues(val.getUnigram(), calcTF(val, maxFrequency), val.getFrequency()));
+        if(key.toString().equals("while")){
+            System.out.println(ni);
+        }
+        for(IDFValues val : valuesCopy) {
+            context.write(new Text(val.getDocumentID()), new IDFValues(key.toString(), calcIDF(val, N, ni)));
         }
     }
 
-    public double calcTF(TFValues value, int maxFreq){
-        double tf = 0.5 + 0.5*(value.getFrequency()/maxFreq);
-        return tf;
+    public double calcIDF(IDFValues value, long N, double ni){
+        double tfidf = value.getIDFValue() * Math.log10(N/ni);
+        return tfidf;
     }
 }

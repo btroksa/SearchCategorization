@@ -39,13 +39,7 @@ public class articleUnigram implements WritableComparable {
     public int compareTo(Object o) {
         if(o instanceof articleUnigram) {
             articleUnigram compare = (articleUnigram) o;
-            if(this.articleTitle.equals(compare.articleTitle) && this.documentID == compare.documentID
-                    && this.unigram.equals(compare.unigram)){
-                return 0;
-            }
-            else {
-                return this.unigram.compareTo(compare.unigram) + this.documentID - compare.documentID;
-            }
+            return (this.documentID - compare.documentID);
         }
         else{
             return -1;

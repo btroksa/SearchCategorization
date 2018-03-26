@@ -1,8 +1,8 @@
 package cs435.tf;
 
 import java.io.IOException;
-import java.util.StringTokenizer;
 
+import cs435.customObjects.IDFValues;
 import cs435.customObjects.TFValues;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;

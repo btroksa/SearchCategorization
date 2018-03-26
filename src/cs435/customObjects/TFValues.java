@@ -35,7 +35,7 @@ public class TFValues implements WritableComparable {
 
     @Override
     public int compareTo(Object o) {
-        if(o instanceof articleUnigram) {
+        if(o instanceof TFValues) {
             if(tfValue == ((TFValues) o).tfValue && this.unigram.equals(((TFValues) o).unigram)){
                 return 0;
             }
