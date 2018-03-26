@@ -33,7 +33,7 @@ public class IDFValues implements WritableComparable {
 
     @Override
     public int compareTo(Object o) {
-        if(o instanceof articleUnigram) {
+        if(o instanceof IDFValues) {
             if(IDFValue == ((IDFValues) o).IDFValue && this.documentID.equals(((IDFValues) o).documentID)){
                 return 0;
             }

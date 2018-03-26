@@ -4,21 +4,22 @@ import java.io.IOException;
 
 import cs435.customObjects.IDFValues;
 import cs435.customObjects.TFValues;
-import cs435.customObjects.articleUnigram;
 import cs435.frequency.FrequencyMapper;
-import cs435.frequency.FrequencyPartitioner;
 import cs435.frequency.FrequencyReducer;
 import cs435.idf.idfMapper;
 import cs435.idf.idfReducer;
+import cs435.sentenceTFIDF.datasetMapper;
+import cs435.sentenceTFIDF.lookUpMapper;
+import cs435.sentenceTFIDF.sentReducer;
 import cs435.tf.tfMapper;
 import cs435.tf.tfReducer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Counter;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
@@ -27,8 +28,9 @@ public class MainClass {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException,
             InterruptedException {
-        if (args.length != 4) {
-            System.out.printf("Usage: <jar file> <input dir> <intermediate dir> <intermediate dir> <output dir>\n");
+        if (args.length != 5) {
+            System.out.printf("Usage: <jar file> <input dir> <intermediate dir> <intermediate dir>" +
+                    "<intermediate dir> <output dir>\n");
             System.exit(-1);
         }
         Configuration conf =new Configuration();
@@ -36,9 +38,8 @@ public class MainClass {
         job.setJarByClass(MainClass.class);
         job.setMapperClass(FrequencyMapper.class);
         job.setReducerClass(FrequencyReducer.class);
-        job.setPartitionerClass(FrequencyPartitioner.class);
-        job.setNumReduceTasks(6);
-        job.setOutputKeyClass(articleUnigram.class);
+        job.setNumReduceTasks(10);
+        job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
@@ -55,7 +56,7 @@ public class MainClass {
             job2.setJarByClass(MainClass.class);
             job2.setMapperClass(tfMapper.class);
             job2.setReducerClass(tfReducer.class);
-            job2.setNumReduceTasks(6);
+            job2.setNumReduceTasks(10);
             job2.setOutputKeyClass(Text.class);
             job2.setOutputValueClass(TFValues.class);
             job2.setInputFormatClass(TextInputFormat.class);
@@ -71,7 +72,7 @@ public class MainClass {
             job3.getConfiguration().setLong(UpdateCount.CNT.name(), someCount);
             job3.setMapperClass(idfMapper.class);
             job3.setReducerClass(idfReducer.class);
-            job3.setNumReduceTasks(6);
+            job3.setNumReduceTasks(10);
             job3.setOutputKeyClass(Text.class);
             job3.setOutputValueClass(IDFValues.class);
             job3.setInputFormatClass(TextInputFormat.class);
@@ -81,7 +82,19 @@ public class MainClass {
             success = job3.waitForCompletion(true);
         }
 
-        //System.exit(job2.waitForCompletion(true) ? 0 : 1);
+        if(success) {
+            Job job4 = Job.getInstance(conf);
+            job4.setJarByClass(MainClass.class);
+            job4.setReducerClass(sentReducer.class);
+            job4.setNumReduceTasks(10);
+            job4.setOutputKeyClass(Text.class);
+            job4.setOutputValueClass(Text.class);
+            job4.setOutputFormatClass(TextOutputFormat.class);
+            MultipleInputs.addInputPath(job4, new Path(args[3]), TextInputFormat.class, lookUpMapper.class);
+            MultipleInputs.addInputPath(job4, new Path(args[0]), TextInputFormat.class, datasetMapper.class);
+            FileOutputFormat.setOutputPath(job4, new Path(args[4]));
+            System.exit(job4.waitForCompletion(true) ? 0 : 1);
+        }
 
     }
 }

@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce787c98-b2fa-4548-8726-8456a45cccee" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/cs435/customObjects/topNWords.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/MainClass.class" afterPath="$PROJECT_DIR$/out/production/PA2/cs435/MainClass.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/customObjects/TFValues.class" afterPath="$PROJECT_DIR$/out/production/PA2/cs435/customObjects/TFValues.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/customObjects/articleUnigram.class" afterPath="$PROJECT_DIR$/out/production/PA2/cs435/customObjects/articleUnigram.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/customObjects/IDFValues.class" afterPath="$PROJECT_DIR$/out/production/PA2/cs435/customObjects/IDFValues.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/customObjects/articleUnigram.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/frequency/FrequencyMapper.class" afterPath="$PROJECT_DIR$/out/production/PA2/cs435/frequency/FrequencyMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/idf/idfMapper.class" afterPath="$PROJECT_DIR$/out/production/PA2/cs435/idf/idfMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/idf/idfReducer.class" afterPath="$PROJECT_DIR$/out/production/PA2/cs435/idf/idfReducer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/tf/tfReducer.class" afterPath="$PROJECT_DIR$/out/production/PA2/cs435/tf/tfReducer.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/frequency/FrequencyPartitioner.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PA2/cs435/frequency/FrequencyReducer.class" afterPath="$PROJECT_DIR$/out/production/PA2/cs435/frequency/FrequencyReducer.class" />
       <change beforePath="$PROJECT_DIR$/src/cs435/MainClass.java" afterPath="$PROJECT_DIR$/src/cs435/MainClass.java" />
-      <change beforePath="$PROJECT_DIR$/src/cs435/customObjects/TFValues.java" afterPath="$PROJECT_DIR$/src/cs435/customObjects/TFValues.java" />
-      <change beforePath="$PROJECT_DIR$/src/cs435/customObjects/articleUnigram.java" afterPath="$PROJECT_DIR$/src/cs435/customObjects/articleUnigram.java" />
+      <change beforePath="$PROJECT_DIR$/src/cs435/customObjects/IDFValues.java" afterPath="$PROJECT_DIR$/src/cs435/customObjects/IDFValues.java" />
+      <change beforePath="$PROJECT_DIR$/src/cs435/customObjects/articleUnigram.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/cs435/frequency/FrequencyMapper.java" afterPath="$PROJECT_DIR$/src/cs435/frequency/FrequencyMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/cs435/frequency/FrequencyPartitioner.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/cs435/frequency/FrequencyReducer.java" afterPath="$PROJECT_DIR$/src/cs435/frequency/FrequencyReducer.java" />
-      <change beforePath="$PROJECT_DIR$/src/cs435/idf/idfMapper.java" afterPath="$PROJECT_DIR$/src/cs435/idf/idfMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/cs435/idf/idfReducer.java" afterPath="$PROJECT_DIR$/src/cs435/idf/idfReducer.java" />
-      <change beforePath="$PROJECT_DIR$/src/cs435/tf/tfMapper.java" afterPath="$PROJECT_DIR$/src/cs435/tf/tfMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/cs435/tf/tfReducer.java" afterPath="$PROJECT_DIR$/src/cs435/tf/tfReducer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tfMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs435/tf/tfMapper.java">
+      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs435/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="63" lean-forward="true" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+            <state relative-caret-position="-585">
+              <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,31 +39,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articleUnigram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/articleUnigram.java">
+      <file leaf-file-name="sentReducer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cs435/sentenceTFIDF/sentReducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="315">
+              <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tfReducer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs435/tf/tfReducer.java">
+      <file leaf-file-name="topNWords.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/topNWords.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-              <folding />
+            <state relative-caret-position="549">
+              <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="idfReducer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs435/idf/idfReducer.java">
+      <file leaf-file-name="lookUpMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs435/sentenceTFIDF/lookUpMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="324">
+              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,8 +80,20 @@
       <file leaf-file-name="idfMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cs435/idf/idfMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="306">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datasetMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs435/sentenceTFIDF/datasetMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,62 +104,13 @@
       <file leaf-file-name="IDFValues.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/IDFValues.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="441">
+              <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
               <folding>
                 <element signature="e#510#511#0" expanded="true" />
                 <element signature="e#543#544#0" expanded="true" />
                 <element signature="e#578#579#0" expanded="true" />
                 <element signature="e#609#610#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TFValues.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/TFValues.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-              <folding>
-                <element signature="e#590#591#0" expanded="true" />
-                <element signature="e#622#623#0" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs435/MainClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrequencyReducer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cs435/frequency/FrequencyReducer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrequencyMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs435/frequency/FrequencyMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="41" column="99" lean-forward="false" selection-start-line="41" selection-start-column="99" selection-end-line="41" selection-end-column="99" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,7 +139,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/MainClass.java" />
         <option value="$PROJECT_DIR$/src/cs435/customObjects.java" />
-        <option value="$PROJECT_DIR$/src/cs435/frequency/FrequencyPartitioner.java" />
         <option value="$PROJECT_DIR$/src/cs435/customObjects/sentenceComparator.java" />
         <option value="$PROJECT_DIR$/src/cs435/tf/articleUnigram.java" />
         <option value="$PROJECT_DIR$/src/cs435/UpdateCount.java" />
@@ -182,13 +147,20 @@
         <option value="$PROJECT_DIR$/src/cs435/customObjects/TFValues.java" />
         <option value="$PROJECT_DIR$/src/cs435/tf/tfMapper.java" />
         <option value="$PROJECT_DIR$/src/cs435/tf/tfReducer.java" />
-        <option value="$PROJECT_DIR$/src/cs435/customObjects/IDFValues.java" />
         <option value="$PROJECT_DIR$/src/cs435/idf/idfMapper.java" />
         <option value="$PROJECT_DIR$/src/cs435/idf/idfReducer.java" />
+        <option value="$PROJECT_DIR$/src/cs435/frequency/FrequencyPartitioner.java" />
         <option value="$PROJECT_DIR$/src/cs435/customObjects/articleUnigram.java" />
-        <option value="$PROJECT_DIR$/src/cs435/frequency/FrequencyMapper.java" />
         <option value="$PROJECT_DIR$/src/cs435/frequency/FrequencyReducer.java" />
+        <option value="$PROJECT_DIR$/src/cs435/frequency/FrequencyMapper.java" />
+        <option value="$PROJECT_DIR$/src/cs435/customObjects/IDFValues.java" />
+        <option value="$PROJECT_DIR$/src/cs435/sentenceTFIDF/lookUpMapper.java" />
+        <option value="$PROJECT_DIR$/src/cs435/sentenceTFIDF/datasetMapper.java" />
         <option value="$PROJECT_DIR$/src/cs435/MainClass.java" />
+        <option value="$PROJECT_DIR$/src/cs435/customObjects/top5Words.java" />
+        <option value="$PROJECT_DIR$/src/cs435/customObjects/SentenceTFIDF.java" />
+        <option value="$PROJECT_DIR$/src/cs435/customObjects/topNWords.java" />
+        <option value="$PROJECT_DIR$/src/cs435/sentenceTFIDF/sentReducer.java" />
       </list>
     </option>
   </component>
@@ -282,6 +254,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="cs435" type="462c0819:PsiDirectoryNode" />
               <item name="idf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PA2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PA2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs435" type="462c0819:PsiDirectoryNode" />
+              <item name="sentenceTFIDF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PA2" type="b2602c69:ProjectViewProjectNode" />
@@ -459,7 +438,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25538972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -588,15 +567,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/IDFValues.java">
+    <entry file="file://$PROJECT_DIR$/src/cs435/idf/idfReducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="396">
+          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -614,19 +590,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs435/frequency/FrequencyPartitioner.java">
+    <entry file="file://$PROJECT_DIR$/src/cs435/tf/tfReducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/articleUnigram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -640,20 +610,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs435/idf/idfReducer.java">
+    <entry file="file://$PROJECT_DIR$/src/cs435/frequency/FrequencyPartitioner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="162">
+          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/articleUnigram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/IDFValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+          <folding>
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs435/frequency/FrequencyReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs435/idf/idfMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs435/idf/idfMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/cs435/sentenceTFIDF/datasetMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="441">
+          <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -662,36 +669,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs435/frequency/FrequencyMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="99" lean-forward="false" selection-start-line="41" selection-start-column="99" selection-end-line="41" selection-end-column="99" />
+        <state relative-caret-position="189">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs435/tf/tfReducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs435/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+        <state relative-caret-position="-585">
+          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs435/frequency/FrequencyReducer.java">
+    <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/SentenceTFIDF.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs435/sentenceTFIDF/lookUpMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs435/customObjects/topNWords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs435/sentenceTFIDF/sentReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
           <folding />
         </state>
       </provider>
